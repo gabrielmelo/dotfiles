@@ -59,10 +59,10 @@ background_opacity: 0.8
 # Font configuration
 font:
   normal:
-    family: 'Fira Code'
+    family: 'Inconsolata'
     style: Regular
   bold:
-    family: 'Fira Code'
+    family: 'Inconsolata'
     style: Bold
 
 key_bindings:
