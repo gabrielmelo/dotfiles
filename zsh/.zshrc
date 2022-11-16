@@ -76,6 +76,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Alias
+alias lsa='ls -al'
+alias sv='sudo vim'
+alias cl='clear'
+alias code='flatpak run com.visualstudio.code'
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -83,10 +89,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#	export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#	export EDITOR='mvim'
 # fi
+
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -108,13 +116,13 @@ SPACESHIP_PROMPT_ORDER=(
   host          # Hostname section
   git           # Git section (git_branch + git_status)
   package       # Package version
-  maven         # Maven section
+
   node          # Node.js section
   php           # PHP section
   docker        # Docker section
   exec_time     # Execution time
   line_sep      # Line break
-  vi_mode       # Vi-mode indicator
+
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
@@ -128,7 +136,7 @@ SPACESHIP_USER_COLOR_ROOT=red
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 # Char
-SPACESHIP_CHAR_SYMBOL=" 🚀 " # Prompt character to be shown before any command
+SPACESHIP_CHAR_SYMBOL="🚀 " # Prompt character to be shown before any command
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
