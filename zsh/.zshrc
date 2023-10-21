@@ -82,6 +82,8 @@ alias sv='sudo vim'
 alias cl='clear'
 alias code='flatpak run com.visualstudio.code'
 
+export EDITOR='vim'
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -89,12 +91,10 @@ alias code='flatpak run com.visualstudio.code'
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#	export EDITOR='vim'
+#   export EDITOR='vim'
 # else
-#	export EDITOR='mvim'
+#   export EDITOR='mvim'
 # fi
-
-export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -108,7 +108,6 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Ooption
 # Order
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
@@ -116,13 +115,10 @@ SPACESHIP_PROMPT_ORDER=(
   host          # Hostname section
   git           # Git section (git_branch + git_status)
   package       # Package version
-
   node          # Node.js section
-  php           # PHP section
   docker        # Docker section
   exec_time     # Execution time
   line_sep      # Line break
-
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
@@ -136,7 +132,8 @@ SPACESHIP_USER_COLOR_ROOT=red
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 # Char
-SPACESHIP_CHAR_SYMBOL="🚀 " # Prompt character to be shown before any command
+SPACESHIP_CHAR_SYMBOL=" 🚀 " # Prompt character to be shown before any command
+
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -159,9 +156,17 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
+zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+
 ### End of Zinit's installer chunk
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export ANDROID_HOME=~/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
