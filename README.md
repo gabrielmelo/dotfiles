@@ -9,12 +9,20 @@ git clone https://github.com/gabrielmelo/dotfiles ~/.dotfiles
 ## Create symlinks
 Create symlinks in the `home` directory to the real files intro the repro.
 
-zshrc
+**zshrc**
 ```sh
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
-gitconfig
+**gitconfig**
 ```sh
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
+```
+
+**fish**
+```sh
+ln -s ~/.dotfiles/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/.dotfiles/fish/fisher.fish ~/.config/fish/fisher.fish
+ln -s ~/.dotfiles/fish/fish_variables ~/.config/fish/fish_variables
+ln -s ~/.dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
 ```
