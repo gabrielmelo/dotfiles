@@ -3,12 +3,22 @@
 	email = gabriel_smelo@proton.me
 	signingkey = 493BD100F4426BAA
 [alias]
-	s = !git status -s
-	c = !git add --all && git commit -m
-	l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+	ci = commit
+	co = checkout
+	cm = checkout main
+	cd = checkout develop
+	cb = checkout -b
+	cs = !git status -s
+	cl = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
 [push]
 	followTags = true
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
 [commit]
 	signingkey = true
 [tag]
 	signingkey = true
+[core]
+	editor = vim
