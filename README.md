@@ -38,5 +38,5 @@ fisher update
 
 **starship**
 ```sh
-ls ~/.config/starship.toml ~/.dotfiles/starship/starship.toml
+ln ~/.dotfiles/starship/starship.toml ~/.config/starship.toml 
 ```
